@@ -6,8 +6,11 @@
 Welcome to Paper's documentation!
 =================================
 
+
+NoSQL Papers:
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    NoSQL/Dynamodb
