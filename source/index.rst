@@ -10,6 +10,7 @@ Welcome to Paper's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   NoSQL/Dynamodb
 
 
 Indices and tables
