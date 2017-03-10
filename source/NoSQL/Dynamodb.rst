@@ -25,9 +25,14 @@ why does Dynamodb provide Put/Get only? why not Scan?
   context object supplied in the put request.
 
 
-因为 dynamodb 是基于一致性哈希来做副本机制的，对于一个key，要先用hash取得一个token，才可以确定要写到哪个node上。因为dynamodb并不是*全局*有序的NoSQL，而是每个token是*有序*的。因此，如果要实现Scan接口，要不就是要扫描整个存储空间，要么就要限定到一个token级别，代价特别大。
+因为 dynamodb 是基于一致性哈希来做副本机制的，对于一个key，要先用hash取得一个token，才可以确定要写到哪个node上。因为dynamodb并不是全局有序的NoSQL，而是每个token是有序的。因此，如果要实现Scan接口，要不就是要扫描整个存储空间，要么就要限定到一个token级别，代价特别大。
 
 Cassandra 对用户暴露了两个概念：
 
 #. partition key: 用来定位到 vnode
 #. order key: 用来排序
+
+Failure Tolerance
+-------------------
+
+1. 如果一台机器故障了，要如何恢复，大概要恢复多久？
