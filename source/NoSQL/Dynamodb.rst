@@ -5,7 +5,7 @@ DYNAMODB
 INTERFACE
 ----------
 
-why does Dynamodb provide Put/Get only? why not Scan?
+1. why does Dynamodb provide Put/Get only? why not Scan?
 
 我们知道，Cassandra 是 dynamodb 的开源实现，Cassandra 实现了 order by 操作，为什么 dynamodb 只提供了 Put 和 Get 接口，不提供 Scan 接口呢？详见论文的 4.1 章:
 
@@ -31,6 +31,9 @@ Cassandra 对用户暴露了两个概念：
 
 #. partition key: 用来定位到 vnode
 #. order key: 用来排序
+
+2. Cassandra 的 Put 接口要传入一个 context 参数，这个参数的目的是什么，如何没有v-clock时怎么办？
+
 
 Failure Tolerance
 -------------------
