@@ -37,4 +37,14 @@ pg_log_t
 
 pg_missing_item
     summary of missing objects。只包含两个成员 eversion_t need, have; 在 Ceph 的实现中，是对每一个 hobject_t 维护一个 pg_missing_item，来判断该对象是否missing。
-
+    
+pg_info_t
+    summarry of a pg
+    
+pg_interval_t  
+    information about a past interval. 这个类的作用是什么？
+    
+last_commit/last_update
+    Ceph 多副本之间保证一致性的一种方法，详细介绍可以参考 http://www.infoq.com/cn/articles/consistency-storage-problem-of-ceph-based-on-pglog
+    
+    
