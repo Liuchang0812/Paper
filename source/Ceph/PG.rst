@@ -46,5 +46,7 @@ pg_interval_t  
     
 last_commit/last_update
     Ceph 多副本之间保证一致性的一种方法，详细介绍可以参考 http://www.infoq.com/cn/articles/consistency-storage-problem-of-ceph-based-on-pglog
-    
+
+object_copy_cursor_t
+    一个用来表示数据复制进度的类，成员有 data_offset, omap_offset （？为什么没有 attr_offset)
     
