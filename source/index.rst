@@ -13,8 +13,9 @@ NoSQL Papers:
    :maxdepth: 2
    :caption: Contents:
 
-   NoSQL/*
-   Ceph/*
+   NoSQL/Dynamodb
+   Ceph/PG
+   Ceph/The-Peering-Process
 
 
 Indices and tables
