@@ -10,10 +10,11 @@ Welcome to Paper's documentation!
 NoSQL Papers:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
-   NoSQL/Dynamodb
+   NoSQL
+   Ceph
 
 
 Indices and tables
