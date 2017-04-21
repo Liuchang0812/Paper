@@ -13,8 +13,8 @@ NoSQL Papers:
    :maxdepth: 2
    :caption: Contents:
 
-   NoSQL
-   Ceph
+   NoSQL/*
+   Ceph/*
 
 
 Indices and tables
