@@ -13,7 +13,8 @@ ceph-medic 是一个用来诊断Ceph集群是否有一些未知的问题的小�
 
 下载所有的依赖包：
 
-```shell
+.. code::
+
 git clone https://github.com/ceph/ceph-medic.git
 cd ceph-medic
 python setup.py sdist
@@ -24,7 +25,7 @@ pip install -d deps remoto
 cp disk/*.tar.gz deps
 ls deps
 tar cvzf ceph-medic-offline.tar.gz deps
-```
+
 
 现在 ceph-medic-offline.tar.gz 包就包含了所有安装所依赖的python包，我们可以把该包上传到服务器上，进行安装。
 
@@ -34,7 +35,8 @@ tar cvzf ceph-medic-offline.tar.gz deps
 
 我们首先，需要在当前目录下新建一个 hosts 文件，告诉 ceph-medic 每个服务器的角色，该配置文件的格式如下：
 
-```
+.. code::
+
 [mons]
 node1
 node2
@@ -44,7 +46,8 @@ node3
 node4
 node5
 node6
-```
+
+
 
 node[1-6] 为机器的 hostname。
 
@@ -53,13 +56,16 @@ node[1-6] 为机器的 hostname。
 
 在配置完成后，我们可以运行如下命令来执行对ceph集群的巡检。
 
-```
+.. code::
+
 ceph-medic check
-```
+
+
 
 ceph-medic 会打印一些信息，告诉您检查的结果。如下：
 
-```
+.. code::
+
 =======================  Starting remote check session  ========================
 Version: 1.0.0    Cluster Name: "ceph"
 Total hosts: [39]
@@ -83,7 +89,8 @@ MDSs:    0    RGWs:    0     MGRs:       0
  node40
 
 201 passed, on 39 hosts
-```
+
+
 
 代码实现
 ---------
