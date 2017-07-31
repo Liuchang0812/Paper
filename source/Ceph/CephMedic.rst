@@ -15,16 +15,16 @@ ceph-medic 是一个用来诊断Ceph集群是否有一些未知的问题的小�
 
 .. code::
 
-git clone https://github.com/ceph/ceph-medic.git
-cd ceph-medic
-python setup.py sdist
-mkdir deps
-pip install -d deps execnet
-pip install -d deps tambo
-pip install -d deps remoto
-cp disk/*.tar.gz deps
-ls deps
-tar cvzf ceph-medic-offline.tar.gz deps
+  git clone https://github.com/ceph/ceph-medic.git
+  cd ceph-medic
+  python setup.py sdist
+  mkdir deps
+  pip install -d deps execnet
+  pip install -d deps tambo
+  pip install -d deps remoto
+  cp disk/*.tar.gz deps
+  ls deps
+  tar cvzf ceph-medic-offline.tar.gz deps
 
 
 现在 ceph-medic-offline.tar.gz 包就包含了所有安装所依赖的python包，我们可以把该包上传到服务器上，进行安装。
@@ -37,15 +37,15 @@ tar cvzf ceph-medic-offline.tar.gz deps
 
 .. code::
 
-[mons]
-node1
-node2
-node3
+  [mons]
+  node1
+  node2
+  node3
 
-[osds]
-node4
-node5
-node6
+  [osds]
+  node4
+  node5
+  node6
 
 
 
@@ -58,7 +58,7 @@ node[1-6] 为机器的 hostname。
 
 .. code::
 
-ceph-medic check
+  ceph-medic check
 
 
 
@@ -66,29 +66,29 @@ ceph-medic 会打印一些信息，告诉您检查的结果。如下：
 
 .. code::
 
-=======================  Starting remote check session  ========================
-Version: 1.0.0    Cluster Name: "ceph"
-Total hosts: [39]
-OSDs:   36    MONs:    3     Clients:    0
-MDSs:    0    RGWs:    0     MGRs:       0
+  =======================  Starting remote check session  ========================
+  Version: 1.0.0    Cluster Name: "ceph"
+  Total hosts: [39]
+  OSDs:   36    MONs:    3     Clients:    0
+  MDSs:    0    RGWs:    0     MGRs:       0
 
-================================================================================
+  ================================================================================
 
------------- osds ------------
- node11
- node10
+  ------------ osds ------------
+   node11
+   node10
    .
    .
    .
- node7
- node6
+   node7
+   node6
 
------------- mons ------------
- node39
- node38
- node40
+  ------------ mons ------------
+   node39
+   node38
+   node40
 
-201 passed, on 39 hosts
+  201 passed, on 39 hosts
 
 
 
