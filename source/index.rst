@@ -7,15 +7,14 @@ Welcome to Paper's documentation!
 =================================
 
 
-NoSQL Papers:
+Papers:
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Contents:
+   :maxdepth: 2
+   :titlesonly:
+   :grob:
 
-   NoSQL/Dynamodb
-   Ceph/PG
-   Ceph/The-Peering-Process
+   *
 
 
 Indices and tables
