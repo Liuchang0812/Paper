@@ -12,7 +12,7 @@ Papers:
 .. toctree::
    :maxdepth: 2
    :titlesonly:
-   :grob:
+   :glob:
    
    Ceph/*
    NoSQL/*
